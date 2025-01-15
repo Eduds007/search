@@ -1,3 +1,5 @@
+from typing import List
+
 class Node:
     def __init__(self, state, parent, childs, path_cost:float):
         """
@@ -15,6 +17,8 @@ class Node:
     
     def __repr__(self) -> str:
         return f"Node(state={self.state}, path_cost={self.path_cost})"
+    
+
     
     
 class Problem:
@@ -36,12 +40,13 @@ class Problem:
     def result(self, state, action):
         raise NotImplementedError("Implement result in a subclass")
         
-    def expand(self, node: Node):
+    def expand(self, node: Node) -> List[Node]:
         state = node.state
         
         for action in Problem.actions(state):
             new_state = Problem.result(state, action)
             cost = node.path_cost + Problem.action_cost(state, cost, new_state)
-            new_node = Node(s,node,action,path_cost=cost)
+            new_node = Node(state,node,action,path_cost=cost)
+            return new_node
 
 
