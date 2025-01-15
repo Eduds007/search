@@ -1,0 +1,63 @@
+# Diretórios e arquivos do ambiente virtual
+venv/
+.env/
+
+# Arquivos de compilação do Python
+*.py[cod]
+__pycache__/
+*.so
+
+# Configurações do IDE/Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs e arquivos temporários
+*.log
+*.tmp
+*.bak
+*.pid
+
+# Arquivos de teste e cobertura
+htmlcov/
+.tox/
+.coverage
+.cache/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# Configuração específica de pacotes
+*.egg-info/
+.eggs/
+*.egg
+
+# Arquivos de distribuição
+dist/
+build/
+*.wheel
+
+# Arquivos criados por ferramentas de debug
+*.prof
+*.stackdump
+
+# Arquivos de banco de dados local
+*.db
+*.sqlite3
+
+# Arquivos criados por Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Chaves ou credenciais (importante para segurança)
+.env
+*.key
+*.pem
+
+# Arquivos de lock específicos
+poetry.lock
+Pipfile.lock
+
+# Arquivos gerados por docstrings
+docs/_build/
